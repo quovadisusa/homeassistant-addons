@@ -35,4 +35,4 @@ jobs:
             --all \
             --aarch64 \
             --target eufy-ha-mqtt-bridge \
-            --docker-hub maxwinterstein
+            --docker-hub quovadisusa
