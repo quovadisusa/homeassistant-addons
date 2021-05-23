@@ -1,8 +1,8 @@
 {
-  "name": "Eufy Home Assistant MQTT Bridge",
+  "name": "Quovadisusa Eufy Home Assistant MQTT Bridge",
   "version": "1.18.0",
-  "slug": "eufy-ha-mqtt-bridge",
-  "image": "maxwinterstein/homeassistant-addon-eufy-ha-mqtt-bridge-{arch}",
+  "slug": "quo-eufy-ha-mqtt-bridge",
+  "image": "quovadisusa/homeassistant-addon-eufy-ha-mqtt-bridge-{arch}",
   "description": "Publish events as MQTT messages",
   "arch": [
     "armhf",
@@ -48,7 +48,7 @@
     "eval": "str?"
   },
   "stage": "experimental",
-  "url": "https://github.com/matijse/eufy-ha-mqtt-bridge/",
+  "url": "https://github.com/quovadis/quo-eufy-ha-mqtt-bridge/",
   "map": [
     "share:rw"
   ],

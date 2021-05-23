@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "Fetching eufy-ha-mqtt-bridge version"
-MQTT_BRIDGE_VERSION=$(curl -s https://api.github.com/repos/matijse/eufy-ha-mqtt-bridge/releases/latest | grep tag_name | cut -d : -f 2,3 | tr -d \" | tr -d ',' | tr -d ' ')
-echo "Newest version of eufy-ha-mqtt-bridge: $MQTT_BRIDGE_VERSION"
+echo "Fetching quo-eufy-ha-mqtt-bridge version"
+MQTT_BRIDGE_VERSION=$(curl -s https://api.github.com/repos/quovadisusa/quo-eufy-ha-mqtt-bridge/releases/latest | grep tag_name | cut -d : -f 2,3 | tr -d \" | tr -d ',' | tr -d ' ')
+echo "Newest version of quo-eufy-ha-mqtt-bridge: $MQTT_BRIDGE_VERSION"
 echo "MQTT_BRIDGE_VERSION=$MQTT_BRIDGE_VERSION" >> $GITHUB_ENV
 
 echo "Check if $MQTT_BRIDGE_VERSION is already used..."
@@ -20,6 +20,6 @@ sed -i.bak "s|VERSION=.*$|VERSION=${MQTT_BRIDGE_VERSION}|" Dockerfile
 
 echo "Update CHANGELOG..."
 sed -i.bak "2 a ## [${ADDON_NEXT_VERSION}] - $(date +%Y-%m-%d)" CHANGELOG.md
-sed -i.bak "3 a - Update \`eufy-ha-mqtt-bridge\` to \`${MQTT_BRIDGE_VERSION}\` [Changelog](https://github.com/matijse/eufy-ha-mqtt-bridge/releases)\n" CHANGELOG.md
+sed -i.bak "3 a - Update \`quo-eufy-ha-mqtt-bridge\` to \`${MQTT_BRIDGE_VERSION}\` [Changelog](https://github.com/quovadisusa/quo-eufy-ha-mqtt-bridge/releases)\n" CHANGELOG.md
 
 rm *.bak #cleanup, mac os related problem
